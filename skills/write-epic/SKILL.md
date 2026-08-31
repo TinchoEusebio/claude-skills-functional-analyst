@@ -1,6 +1,6 @@
 ---
 name: write-epic
-description: Draft a structured, implementation-ready epic (functional spec) for your team's repos, ALWAYS in English. Use when the user asks to write, draft, plan, or "make an epic" / "plan a feature" / "scope this" / "write the spec" spanning multiple stories or repos — or invokes `/write-epic`. Optionally takes Confluence pages or Jira issues as input when the user links them. Produces a single English markdown document following the fixed 12-section template in references/epic-template.md. English is the standard even if the user writes in another language.
+description: Draft a structured, implementation-ready epic (functional spec) for your team's repos, ALWAYS in English. Use when the user asks to write, draft, plan, or "make an epic" / "plan a feature" / "scope this" / "write the spec" spanning multiple stories or repos — or invokes `/write-epic`. Optionally takes Confluence pages or Jira issues as input when the user links them. Produces a single English markdown document following a fixed 12-section structure. English is the standard even if the user writes in another language.
 ---
 
 # Writing epics
@@ -13,11 +13,22 @@ engineers who will build it.
 English is the standard for epics regardless of the language the user writes in —
 converse with them in their language, but the document body is always English.
 
-**The output format is fixed.** Read
-[references/epic-template.md](references/epic-template.md) before writing and
-follow its 12 sections, in order, with its ID conventions (BR-001 business rules,
-FR-001 functional requirements, AF-01 alternative flows). The template carries
-the per-section guidance and a worked example — don't reinvent the structure.
+**The output format is fixed.** Use these 12 sections, in this order, with the
+ID conventions BR-001 (business rules), FR-001 (functional requirements) and
+AF-01 (alternative flows) — don't reinvent the structure:
+
+1. Summary
+2. Objectives and business value
+3. Current situation
+4. Scope of the solution
+5. Users and roles involved
+6. Functional flow
+7. Business rules
+8. Functional requirements
+9. Non-functional requirements *(conditional)*
+10. Integrations with other systems *(conditional)*
+11. Assumptions and dependencies
+12. Success metrics *(conditional)*
 
 ## Process before writing
 
@@ -87,12 +98,11 @@ the per-section guidance and a worked example — don't reinvent the structure.
 
 - **English only** for the document body, including headers, code comments, and
   example UI copy.
-- Follow the template's section order and IDs exactly. Skip a conditional section
+- Follow the section order and IDs above exactly. Skip a conditional section
   only after asking (step 5).
 - **Testable requirements.** Every functional requirement needs acceptance
   criteria, and every acceptance criterion traces back to a business rule,
-  alternative flow, or edge case — annotate the coverage inline, as the template
-  shows.
+  alternative flow, or edge case — annotate the coverage inline.
 - **Edge cases and alternative flows are part of the job**, not an appendix.
   Boundary values (exactly at the threshold), empty/zero cases, missing
   configuration, and technical failure + rollback are the ones most often
