@@ -17,3 +17,4 @@ si no lo tiene, permite el ingreso
 
 It is considered best practice to separate your HTML and CSS in different files.
 the link element <link rel="stylesheet" href="./styles.css" />
+The . followed by a forward slash in the example tells the computer to look in the current folder, or directory, for the styles.css file.
