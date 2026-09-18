@@ -1,0 +1,19 @@
+Hoy aprendi que <h1> y </h1> se usan para señalizar inicios y fin de parrafos
+lo mismo se puede usar para h1 h2 h3 hasta h6
+aprendi la etiqueta a o tag en ingles
+la etiqueta a se señala <a href="link" target="_blank"> texto del atributo a </a>
+el atributo check
+<input type="checkbox" checked /> 
+se usa para marcar un checkbox
+en este caso "checked" es el default 
+el tag img. Ejemplo <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" 
+alt="Two cats running in the dirt." /> 
+alt se usa para accesibilidad. src apunta al link de la imagen en cuestión. 
+Si el link no anda o la persona tiene su buscador configurado para ser accesible, se renderiza el texto del 
+atributo alt
+El tag imput tipo texto. Ejemplo <input type="text" >
+si le agrego disabled, me prohibe el ingreso. <input type="text" disabled>
+si no lo tiene, permite el ingreso
+
+It is considered best practice to separate your HTML and CSS in different files.
+the link element <link rel="stylesheet" href="./styles.css" />
